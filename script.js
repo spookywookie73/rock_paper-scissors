@@ -11,11 +11,28 @@ function playRound(playerSelection, computerSelection) {
     if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "scissors") {
       return "You Win! Rock beats Scissors";
     } else {
-      return "You Lose! Paper beats Rock";
+      if(playerSelection.toLowerCase() === "rock" && computerSelection.toLowerCase() === "paper") {
+        return "You Lose! Paper beats Rock";
+      } else {
+        if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "rock") {
+          return "You Win! Paper beats Rock";
+        } else {
+          if(playerSelection.toLowerCase() === "paper" && computerSelection.toLowerCase() === "scissors") {
+            return "You Lose! Scissors beat Paper";
+          } else {
+            if(playerSelection.toLowerCase() === "scissors" && computerSelection.toLowerCase() === "paper") {
+              return "You Win! Scissors beat Paper";
+            } else {
+              return "You Lose! Rock beats Scissors";
+            }
+          }
+        }
+      }
     }
-  }
+  } 
+  
 }
 
-var playerSelection = "rock";
+var playerSelection = prompt("Choose Rock, Paper or Scissors.");
 var computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
