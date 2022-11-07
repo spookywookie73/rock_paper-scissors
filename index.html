@@ -1,11 +1,38 @@
 <!DOCTYPE html>
-<html lang ="en">
+<html lang="en">
   <head>
-    <meta charset = "UTF-8">
+    <meta charset="UTF-8">
     <title>Rock Paper Scissors</title>
-    <script type = "text/javascript" src = "script.js"></script>
+    <script type="text/javascript" src="script.js" defer></script>
   </head>
+  
   <body>
+    <div class="selections">
+      <button class="selection" data-selection="rock">Rock</button>
+      <button class="selection" data-selection="paper">Paper</button>
+      <button class="selection" data-selection="scissors">Scissors</button>
+    </div>
+    <br>
+    <div class="results">
+      <div>
+        You
+        <span class="result-score" data-your-score>0</span>
+      </div>
+      <div>
+        Computer
+        <span class="result-score" data-computer-score>0</span>
+      </div>
+      <br>
+      <div>
+        Result : 
+        <span class="results-message" data-results></span>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+      <button id="reset">Play Again</button>
+    </div>
     
   </body>
 </html>
